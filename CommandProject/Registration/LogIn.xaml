@@ -1,0 +1,36 @@
+﻿<Window x:Class="CommandProject.Registration.LogIn"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CommandProject.Registration"
+        mc:Ignorable="d"
+        Title="LogIn" Height="300" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="5">Логин:</Label>
+            <Label Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="5">Пароль:</Label>
+            <TextBox x:Name="Login" Grid.Column="1" Width="150" Height="25" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="5"></TextBox>
+            <PasswordBox x:Name="Password" Grid.Column="1" Grid.Row="1" Width="150" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5"></PasswordBox>
+        </Grid>
+        <Button Grid.Row="2" Margin="5" Height="25" Width="100" HorizontalAlignment="Left">Отмена</Button>
+        <Button Grid.Column="1" Grid.Row="2" Margin="5" Height="25" Width="100" HorizontalAlignment="Right" Click="Button_Click">Вход</Button>
+    </Grid>
+</Window>

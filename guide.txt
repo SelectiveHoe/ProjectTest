@@ -1,0 +1,19 @@
+trello.com - доска с задачами
+название нашей доски team-10-17-p-1
+
+slack.com - мессенджер для разработки
+после создания аккаунта ввести в этот текстовый файл свою почту зарегестрированную на слэке и на трелло
+и имя с фамилией и запушить на гитхаб 
+название команды в слэке - team-10-17-p-1
+
+fiskonerone@gmail.com - Артемий Черевко
+kotcemen2013@gmail.com - Крюков Антон
+danil_yartymik@mail.ru - danil yartymik
+v.proskurin@gmail.com - Владимир Проскурин
+kotcemen2013@gmail.com - Крюков Антон
+nikitos2337@gmail.com - Пастухов Никита
+lav199917@gmail.com - Лапин Александ
+lav199917@gmail.com - Лапин Александр
+snek9903@gmail.com - Cеребряников Александр
+laravelprojectw2@gmail.com - Чиняков Никита
+
