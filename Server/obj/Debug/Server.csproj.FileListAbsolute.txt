@@ -1,0 +1,13 @@
+C:\Users\Alex\Desktop\ProjectTest\Server\bin\Debug\Server.exe.config
+C:\Users\Alex\Desktop\ProjectTest\Server\bin\Debug\Server.exe
+C:\Users\Alex\Desktop\ProjectTest\Server\bin\Debug\Server.pdb
+C:\Users\Alex\Desktop\ProjectTest\Server\bin\Debug\DatabaseLib.dll
+C:\Users\Alex\Desktop\ProjectTest\Server\bin\Debug\EntityFramework.dll
+C:\Users\Alex\Desktop\ProjectTest\Server\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Alex\Desktop\ProjectTest\Server\bin\Debug\EntityFramework.xml
+C:\Users\Alex\Desktop\ProjectTest\Server\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Alex\Desktop\ProjectTest\Server\obj\Debug\Server.csprojAssemblyReference.cache
+C:\Users\Alex\Desktop\ProjectTest\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\Users\Alex\Desktop\ProjectTest\Server\obj\Debug\Server.csproj.CopyComplete
+C:\Users\Alex\Desktop\ProjectTest\Server\obj\Debug\Server.exe
+C:\Users\Alex\Desktop\ProjectTest\Server\obj\Debug\Server.pdb
