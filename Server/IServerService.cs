@@ -13,7 +13,7 @@ namespace Server
     public interface IServerService
     {
         [OperationContract(IsOneWay = true)]
-        void Registration(User user);
+        void Registration(string login, string password, List<string> rolesName);
         [OperationContract]
         User Auth(string login, string password);
 

@@ -23,6 +23,8 @@ namespace Server
             Bug bug = new Bug() { Description = Decription, Pictures = pic };
 
             db.Bugs.Add(bug);
+            db.SaveChanges();
+
             try
             {
                 foreach (var item in operationContexts.ToList())
@@ -81,7 +83,7 @@ namespace Server
                 User = user,
                 UserId = user.Id
             });
-
+            db.SaveChanges();
             try
             {
                 foreach (var item in operationContexts.ToList())
@@ -111,7 +113,7 @@ namespace Server
 
             bug.Status = stat;
             db.BugHistories.Add(bug);
-
+            db.SaveChanges();
             try
             {
                 foreach (var item in operationContexts.ToList())
@@ -162,10 +164,13 @@ namespace Server
             return null;
         }
 
-        public void Registration(User user)
+        public void Registration(string login, string password, List<string> rolesName)
         {
             DatabaseContext db = new DatabaseContext();
+            var filteredOrders = db.Roles.Where(o => rolesName.Contains(o.Name));
+            var user = new User() { Login = login, Password = password, Roles = filteredOrders.ToList() };
             db.Users.Add(user);
+            db.SaveChanges();
 
             if (user.Roles.FirstOrDefault(x => x.Name == "Разработчик") != null)
             {
