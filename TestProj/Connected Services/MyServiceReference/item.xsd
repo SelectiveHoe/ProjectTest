@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8080/ServerService/?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:8080/ServerService/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ConsoleApp_DB" />
+  <xs:element name="Registration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="login" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="rolesName" nillable="true" type="q1:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Auth">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="login" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ConsoleApp_DB" minOccurs="0" name="AuthResult" nillable="true" type="q2:User" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="login" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ConsoleApp_DB" minOccurs="0" name="GetUserResult" nillable="true" type="q3:User" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBugHistory">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBugHistoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ConsoleApp_DB" minOccurs="0" name="GetBugHistoryResult" nillable="true" type="q4:ArrayOfBugHistory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBugHistoryToNameUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nameUser" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBugHistoryToNameUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ConsoleApp_DB" minOccurs="0" name="GetBugHistoryToNameUserResult" nillable="true" type="q5:ArrayOfBugHistory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBugHistoryToDecriptionBug">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DescriptionBug" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBugHistoryToDecriptionBugResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ConsoleApp_DB" minOccurs="0" name="GetBugHistoryToDecriptionBugResult" nillable="true" type="q6:ArrayOfBugHistory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditStatusBugs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Login" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DescriptionBugHistory" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DropBug">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DescriptionBug" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddBug">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ConsoleApp_DB" minOccurs="0" name="user" nillable="true" type="q7:User" />
+        <xs:element minOccurs="0" name="Decription" nillable="true" type="xs:string" />
+        <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ImgBytes" nillable="true" type="q8:ArrayOfArrayOfunsignedByte" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Message">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="message" nillable="true" type="xs:anyType" />
+        <xs:element minOccurs="0" name="descr" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

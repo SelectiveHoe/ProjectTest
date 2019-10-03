@@ -11,3 +11,16 @@ C:\Users\Alex\Desktop\ProjectTest\Server\obj\Debug\Server.csproj.CoreCompileInpu
 C:\Users\Alex\Desktop\ProjectTest\Server\obj\Debug\Server.csproj.CopyComplete
 C:\Users\Alex\Desktop\ProjectTest\Server\obj\Debug\Server.exe
 C:\Users\Alex\Desktop\ProjectTest\Server\obj\Debug\Server.pdb
+C:\Users\09100\Documents\gitgitgit\projectTest\ProjectTest\Server\bin\Debug\Server.exe.config
+C:\Users\09100\Documents\gitgitgit\projectTest\ProjectTest\Server\bin\Debug\Server.exe
+C:\Users\09100\Documents\gitgitgit\projectTest\ProjectTest\Server\bin\Debug\Server.pdb
+C:\Users\09100\Documents\gitgitgit\projectTest\ProjectTest\Server\bin\Debug\DatabaseLib.dll
+C:\Users\09100\Documents\gitgitgit\projectTest\ProjectTest\Server\bin\Debug\EntityFramework.dll
+C:\Users\09100\Documents\gitgitgit\projectTest\ProjectTest\Server\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\09100\Documents\gitgitgit\projectTest\ProjectTest\Server\bin\Debug\EntityFramework.xml
+C:\Users\09100\Documents\gitgitgit\projectTest\ProjectTest\Server\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\09100\Documents\gitgitgit\projectTest\ProjectTest\Server\obj\Debug\Server.csprojAssemblyReference.cache
+C:\Users\09100\Documents\gitgitgit\projectTest\ProjectTest\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\Users\09100\Documents\gitgitgit\projectTest\ProjectTest\Server\obj\Debug\Server.csproj.CopyComplete
+C:\Users\09100\Documents\gitgitgit\projectTest\ProjectTest\Server\obj\Debug\Server.exe
+C:\Users\09100\Documents\gitgitgit\projectTest\ProjectTest\Server\obj\Debug\Server.pdb
