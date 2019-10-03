@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 using ConsoleApp_DB;
+using System.Data.Entity;
 
 namespace Server
 {
@@ -23,6 +24,8 @@ namespace Server
             Bug bug = new Bug() { Description = Decription, Pictures = pic };
 
             db.Bugs.Add(bug);
+            db.SaveChanges();
+
             try
             {
                 foreach (var item in operationContexts.ToList())
@@ -46,23 +49,28 @@ namespace Server
 
         public User Auth(string login, string password)
         {
-            DatabaseContext db = new DatabaseContext();
-            var user = db.Users.FirstOrDefault(x => x.Login == login && x.Password == password);
-
-            if (user != null)
+            //return new User() { Login = "123", Password = "123" };
+            using (DatabaseContext db = new DatabaseContext())
             {
-                try
+                var user = db.Users.Include(u => u.Roles).FirstOrDefault(x => x.Login == login && x.Password == password);
+                if (user != null)
                 {
-                    var temp = operationContexts[user];
-                    temp = OperationContext.Current;
+                    try
+                    {
+                        var temp = operationContexts[user];
+                        temp = OperationContext.Current;
+                    }
+                    catch (Exception ex)
+                    {
+                        operationContexts.Add(user, OperationContext.Current);
+                    }
+
+
+
+                    return new User();
                 }
-                catch (Exception)
-                {
-                    operationContexts.Add(user, OperationContext.Current);
-                }
-                return user;
-            }            
-            return null;
+                return null;
+            }
         }
 
         public void DropBug(string DescriptionBug, int UserId)
@@ -81,7 +89,7 @@ namespace Server
                 User = user,
                 UserId = user.Id
             });
-
+            db.SaveChanges();
             try
             {
                 foreach (var item in operationContexts.ToList())
@@ -111,7 +119,7 @@ namespace Server
 
             bug.Status = stat;
             db.BugHistories.Add(bug);
-
+            db.SaveChanges();
             try
             {
                 foreach (var item in operationContexts.ToList())
@@ -156,16 +164,24 @@ namespace Server
             DatabaseContext db = new DatabaseContext();
             var user = db.Users.FirstOrDefault(x => x.Login == login);
 
+            List<Role> tempRoles = new List<Role>();
+            foreach (var Item in user.Roles)
+                tempRoles.Add(new Role() { Id = Item.Id, Name = Item.Name });
+
+
             if (user != null)
-                return user;
+                return new User() { Id = user.Id, Login = user.Login, Password = user.Password, Roles = tempRoles };
 
             return null;
         }
 
-        public void Registration(User user)
+        public void Registration(string login, string password, List<string> rolesName)
         {
             DatabaseContext db = new DatabaseContext();
+            var filteredOrders = db.Roles.Where(o => rolesName.Contains(o.Name));
+            var user = new User() { Login = login, Password = password, Roles = filteredOrders.ToList() };
             db.Users.Add(user);
+            db.SaveChanges();
 
             if (user.Roles.FirstOrDefault(x => x.Name == "Разработчик") != null)
             {

@@ -576,10 +576,10 @@ namespace CommandProject.MyServiceReference {
     public interface IServerService {
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IServerService/Registration")]
-        void Registration(CommandProject.MyServiceReference.User user);
+        void Registration(string login, string password, string[] rolesName);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IServerService/Registration")]
-        System.Threading.Tasks.Task RegistrationAsync(CommandProject.MyServiceReference.User user);
+        System.Threading.Tasks.Task RegistrationAsync(string login, string password, string[] rolesName);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerService/Auth", ReplyAction="http://tempuri.org/IServerService/AuthResponse")]
         CommandProject.MyServiceReference.User Auth(string login, string password);
@@ -612,10 +612,10 @@ namespace CommandProject.MyServiceReference {
         System.Threading.Tasks.Task<CommandProject.MyServiceReference.BugHistory[]> GetBugHistoryToDecriptionBugAsync(string DescriptionBug);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IServerService/EditStatusBugs")]
-        void EditStatusBugs(string DescriptionBugHistory, string status);
+        void EditStatusBugs(string Login, string DescriptionBugHistory, string status);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IServerService/EditStatusBugs")]
-        System.Threading.Tasks.Task EditStatusBugsAsync(string DescriptionBugHistory, string status);
+        System.Threading.Tasks.Task EditStatusBugsAsync(string Login, string DescriptionBugHistory, string status);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IServerService/DropBug")]
         void DropBug(string DescriptionBug, int UserId);
@@ -624,18 +624,16 @@ namespace CommandProject.MyServiceReference {
         System.Threading.Tasks.Task DropBugAsync(string DescriptionBug, int UserId);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IServerService/AddBug")]
-        void AddBug(string login, string Decription, byte[][] ImgBytes);
+        void AddBug(CommandProject.MyServiceReference.User user, string Decription, byte[][] ImgBytes);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IServerService/AddBug")]
-        System.Threading.Tasks.Task AddBugAsync(string login, string Decription, byte[][] ImgBytes);
+        System.Threading.Tasks.Task AddBugAsync(CommandProject.MyServiceReference.User user, string Decription, byte[][] ImgBytes);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface IServerServiceCallback {
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IServerService/Message")]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(byte[][]))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(byte[]))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CommandProject.MyServiceReference.User))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CommandProject.MyServiceReference.Role[]))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CommandProject.MyServiceReference.Role))]
@@ -646,6 +644,9 @@ namespace CommandProject.MyServiceReference {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CommandProject.MyServiceReference.Picture[]))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CommandProject.MyServiceReference.Picture))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CommandProject.MyServiceReference.Status))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(string[]))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(byte[][]))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(byte[]))]
         void Message([System.ServiceModel.MessageParameterAttribute(Name="message")] object message1, string descr);
     }
     
@@ -677,12 +678,12 @@ namespace CommandProject.MyServiceReference {
                 base(callbackInstance, binding, remoteAddress) {
         }
         
-        public void Registration(CommandProject.MyServiceReference.User user) {
-            base.Channel.Registration(user);
+        public void Registration(string login, string password, string[] rolesName) {
+            base.Channel.Registration(login, password, rolesName);
         }
         
-        public System.Threading.Tasks.Task RegistrationAsync(CommandProject.MyServiceReference.User user) {
-            return base.Channel.RegistrationAsync(user);
+        public System.Threading.Tasks.Task RegistrationAsync(string login, string password, string[] rolesName) {
+            return base.Channel.RegistrationAsync(login, password, rolesName);
         }
         
         public CommandProject.MyServiceReference.User Auth(string login, string password) {
@@ -725,12 +726,12 @@ namespace CommandProject.MyServiceReference {
             return base.Channel.GetBugHistoryToDecriptionBugAsync(DescriptionBug);
         }
         
-        public void EditStatusBugs(string DescriptionBugHistory, string status) {
-            base.Channel.EditStatusBugs(DescriptionBugHistory, status);
+        public void EditStatusBugs(string Login, string DescriptionBugHistory, string status) {
+            base.Channel.EditStatusBugs(Login, DescriptionBugHistory, status);
         }
         
-        public System.Threading.Tasks.Task EditStatusBugsAsync(string DescriptionBugHistory, string status) {
-            return base.Channel.EditStatusBugsAsync(DescriptionBugHistory, status);
+        public System.Threading.Tasks.Task EditStatusBugsAsync(string Login, string DescriptionBugHistory, string status) {
+            return base.Channel.EditStatusBugsAsync(Login, DescriptionBugHistory, status);
         }
         
         public void DropBug(string DescriptionBug, int UserId) {
@@ -741,12 +742,12 @@ namespace CommandProject.MyServiceReference {
             return base.Channel.DropBugAsync(DescriptionBug, UserId);
         }
         
-        public void AddBug(string login, string Decription, byte[][] ImgBytes) {
-            base.Channel.AddBug(login, Decription, ImgBytes);
+        public void AddBug(CommandProject.MyServiceReference.User user, string Decription, byte[][] ImgBytes) {
+            base.Channel.AddBug(user, Decription, ImgBytes);
         }
         
-        public System.Threading.Tasks.Task AddBugAsync(string login, string Decription, byte[][] ImgBytes) {
-            return base.Channel.AddBugAsync(login, Decription, ImgBytes);
+        public System.Threading.Tasks.Task AddBugAsync(CommandProject.MyServiceReference.User user, string Decription, byte[][] ImgBytes) {
+            return base.Channel.AddBugAsync(user, Decription, ImgBytes);
         }
     }
 }

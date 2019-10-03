@@ -18,17 +18,17 @@ namespace ConsoleApp_DB
                 (new MyContextInitializer());
             Database.Initialize(true);
         }
-        [DataMember]
+
         public DbSet<User> Users { get; set; }
-        [DataMember]
+     
         public DbSet<Role> Roles { get; set; }
-        [DataMember]
+      
         public DbSet<Bug> Bugs { get; set; }
-        [DataMember]
+    
         public DbSet<Status> Statuses { get; set; }
-        [DataMember]
+       
         public DbSet<Picture> Pictures { get; set; }
-        [DataMember]
+    
         public DbSet<BugHistory> BugHistories { get; set; }
     }
 }

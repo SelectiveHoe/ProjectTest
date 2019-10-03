@@ -16,7 +16,7 @@ namespace ConsoleApp_DB
         public int BugId { get; set; }
         [DataMember]
         public byte[] Image { get; set; }
-        [DataMember]
+
         public virtual Bug Bug { get; set; }
     }
 }

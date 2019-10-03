@@ -14,7 +14,8 @@ namespace ConsoleApp_DB
         public int Id { get; set; }
         [DataMember]
         public string Description { get; set; }
-        [DataMember]
+
+
         public virtual ICollection<Picture> Pictures { get; set; }
 
         public Bug()

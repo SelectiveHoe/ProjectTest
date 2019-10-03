@@ -14,13 +14,13 @@ namespace ConsoleApp_DB
     {
         [DataMember]
         public int Id { get; set; }
+
         [DataMember]
-        [StringLength(450)]
-        [Index(IsUnique = true)]
         public string Login { get; set; }
+
         [DataMember]
         public string Password { get; set; }
-        [DataMember]
+
         public virtual ICollection<Role> Roles { get; set; }
         public User()
         {

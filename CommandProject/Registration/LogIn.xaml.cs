@@ -16,31 +16,44 @@ using System.Windows.Shapes;
 
 namespace CommandProject.Registration
 {
-    public partial class LogIn : Window
+    public partial class LogIn : Window, IServerServiceCallback
     {
         public User user;
         InstanceContext site;
+        ServerServiceClient proxy;
         public LogIn()
         {
             InitializeComponent();
+            site = new InstanceContext(this);
+            proxy = new ServerServiceClient(site);
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        public void Message([MessageParameter(Name = "message")] object message1, string descr)
         {
-            //site = new InstanceContext(this);
-            //ServerServiceClient proxy = new ServerServiceClient(site);
-            user = new User();
-            user.Login = Login.Text;
-            user.Password = Password.Password;
-            //user = proxy.Auth(Login.Text, Password.Password);
-            //if(user == null)
-            //{
-            //    Title = "LogIn: Не правильный логин или пароль";
-            //}
-            //else
-            //{
-                this.Close();
-            //}
+            throw new NotImplementedException();
+        }
+
+        private  void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (Login.Text == "" || Password.Password == "")
+            {
+                MessageBox.Show("Введите логин и пароль!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
+            {
+                user = new User();
+                user.Login = Login.Text;
+                user.Password = Password.Password;
+                user = proxy.GetUser(user.Login);
+                if (user == null)
+                {
+                    MessageBox.Show("Не правильный логин или пароль", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                else
+                {
+                    this.Close();
+                }
+            }
         }
     }
 }

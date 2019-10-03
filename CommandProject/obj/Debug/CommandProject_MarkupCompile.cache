@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\123332\ProjectTest\CommandProject\obj\Debug\
+E:\CommandProject\ProjectTest\CommandProject\obj\Debug\
 CommandProject
 none
 false
 DEBUG;TRACE
-D:\123332\ProjectTest\CommandProject\App.xaml
-2-239713957
+E:\CommandProject\ProjectTest\CommandProject\App.xaml
+3106331071
 
-11-1463731920
+81448666360
 151560689069
-MainWindow.xaml;Registration\LogIn.xaml;
+MainWindow.xaml;Registration\LogIn.xaml;Registration\RegWin.xaml;
 
-True
+False
 
