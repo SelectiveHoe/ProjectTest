@@ -33,21 +33,32 @@ namespace CommandProject.Registration
             throw new NotImplementedException();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            
-            user = new User();
-            user.Login = Login.Text;
-            user.Password = Password.Password;
-            user = proxy.Auth(user.Login,user.Password);
-            if (user == null)
+            if (Login.Text == "" || Password.Password == "")
             {
-                Title = "LogIn: Не правильный логин или пароль";
+                MessageBox.Show("Введите логин и пароль!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else
             {
-                this.Close();
+                user = new User();
+                user.Login = Login.Text;
+                user.Password = Password.Password;
+                user = await proxy.AuthAsync(user.Login, user.Password);
+                if (user == null)
+                {
+                    MessageBox.Show("Не правильный логин или пароль", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                else
+                {
+                    this.Close();
+                }
             }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

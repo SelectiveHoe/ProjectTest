@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CommandProject.Registration"
         mc:Ignorable="d"
-        Title="LogIn" Height="300" Width="300">
+        Title="LogIn" Height="150" Width="350" MinHeight="150" MinWidth="350">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -30,7 +30,7 @@
             <TextBox x:Name="Login" Grid.Column="1" Width="150" Height="25" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="5"></TextBox>
             <PasswordBox x:Name="Password" Grid.Column="1" Grid.Row="1" Width="150" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5"></PasswordBox>
         </Grid>
-        <Button Grid.Row="2" Margin="5" Height="25" Width="100" HorizontalAlignment="Left">Отмена</Button>
+        <Button Grid.Row="2" Margin="5" Height="25" Width="100" HorizontalAlignment="Left" Click="Button_Click_1">Отмена</Button>
         <Button Grid.Column="1" Grid.Row="2" Margin="5" Height="25" Width="100" HorizontalAlignment="Right" Click="Button_Click">Вход</Button>
     </Grid>
 </Window>

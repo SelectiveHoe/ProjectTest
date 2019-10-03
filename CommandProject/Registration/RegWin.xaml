@@ -5,8 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CommandProject.Registration"
         mc:Ignorable="d"
-        Title="RegWin" Height="300" Width="300">
+        Title="Регистрация" Height="200" Width="350" MaxHeight="200" MaxWidth="350">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="RegButt" Grid.Row="4" Grid.Column="0" Margin="5" Width="150" Height="30" HorizontalAlignment="Center" Grid.ColumnSpan="2" VerticalAlignment="Bottom">Зарегистрироватся</Button>
+        <Grid Grid.RowSpan="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5">Логин: </Label>
+            <Label Grid.Row="1" HorizontalAlignment="Right" Margin="5" VerticalAlignment="Center">Пароль:</Label>
+            <Label Grid.Row="2" HorizontalAlignment="Right" Margin="5" VerticalAlignment="Center">Повторите пароль:</Label>
+            <TextBox x:Name="Login" Grid.Row="0" Grid.Column="1" Margin="5" Width="150" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBox>
+            <PasswordBox x:Name="FirstPass" Grid.Row="1" Grid.Column="1" Margin="5" Width="150" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center"></PasswordBox>
+            <TextBox x:Name="LastPass" Grid.Row="2" Grid.Column="1" Margin="5" Width="150" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBox>
+        </Grid>
     </Grid>
 </Window>
