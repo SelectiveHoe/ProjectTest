@@ -20,11 +20,10 @@ namespace ConsoleApp_DB
         public int StatusId { get; set; }
         [DataMember]
         public DateTime Date { get; set; }
-        [DataMember]
+
+
         public virtual Bug Bug { get; set; }
-        [DataMember]
         public virtual User User { get; set; }
-        [DataMember]
         public virtual Status Status { get; set; }
     }
 }

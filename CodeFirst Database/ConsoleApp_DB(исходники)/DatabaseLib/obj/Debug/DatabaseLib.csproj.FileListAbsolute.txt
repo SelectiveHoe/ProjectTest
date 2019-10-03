@@ -1,0 +1,11 @@
+E:\CommandProject\ProjectTest\CodeFirst Database\ConsoleApp_DB(исходники)\DatabaseLib\bin\Debug\DatabaseLib.dll.config
+E:\CommandProject\ProjectTest\CodeFirst Database\ConsoleApp_DB(исходники)\DatabaseLib\bin\Debug\DatabaseLib.dll
+E:\CommandProject\ProjectTest\CodeFirst Database\ConsoleApp_DB(исходники)\DatabaseLib\bin\Debug\DatabaseLib.pdb
+E:\CommandProject\ProjectTest\CodeFirst Database\ConsoleApp_DB(исходники)\DatabaseLib\bin\Debug\EntityFramework.dll
+E:\CommandProject\ProjectTest\CodeFirst Database\ConsoleApp_DB(исходники)\DatabaseLib\bin\Debug\EntityFramework.SqlServer.dll
+E:\CommandProject\ProjectTest\CodeFirst Database\ConsoleApp_DB(исходники)\DatabaseLib\bin\Debug\EntityFramework.xml
+E:\CommandProject\ProjectTest\CodeFirst Database\ConsoleApp_DB(исходники)\DatabaseLib\bin\Debug\EntityFramework.SqlServer.xml
+E:\CommandProject\ProjectTest\CodeFirst Database\ConsoleApp_DB(исходники)\DatabaseLib\obj\Debug\DatabaseLib.csproj.CoreCompileInputs.cache
+E:\CommandProject\ProjectTest\CodeFirst Database\ConsoleApp_DB(исходники)\DatabaseLib\obj\Debug\DatabaseLib.csproj.CopyComplete
+E:\CommandProject\ProjectTest\CodeFirst Database\ConsoleApp_DB(исходники)\DatabaseLib\obj\Debug\DatabaseLib.dll
+E:\CommandProject\ProjectTest\CodeFirst Database\ConsoleApp_DB(исходники)\DatabaseLib\obj\Debug\DatabaseLib.pdb

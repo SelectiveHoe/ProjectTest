@@ -14,12 +14,11 @@ namespace ConsoleApp_DB
     {
         [DataMember]
         public int Id { get; set; }
-        [DataMember]
-        [StringLength(450)]
-        [Index(IsUnique = true)]
-        public string Name { get; set; }
 
         [DataMember]
+        public string Name { get; set; }
+
+
         public virtual ICollection<User> Users { get; set; }
         public Role()
         {

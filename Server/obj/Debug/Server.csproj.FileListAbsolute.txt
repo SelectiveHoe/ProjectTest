@@ -24,3 +24,5 @@ E:\CommandProject\ProjectTest\Server\obj\Debug\Server.csproj.CoreCompileInputs.c
 E:\CommandProject\ProjectTest\Server\obj\Debug\Server.csproj.CopyComplete
 E:\CommandProject\ProjectTest\Server\obj\Debug\Server.exe
 E:\CommandProject\ProjectTest\Server\obj\Debug\Server.pdb
+E:\CommandProject\ProjectTest\Server\bin\Debug\DatabaseLib.pdb
+E:\CommandProject\ProjectTest\Server\bin\Debug\DatabaseLib.dll.config

@@ -19,18 +19,16 @@ namespace CommandProject
 {
     public partial class MainWindow : Window, IServerServiceCallback
     {
-        ServerServiceClient proxy;
-        InstanceContext site;
+        
         public MainWindow()
         {
             Registration.LogIn login = new Registration.LogIn();
             login.ShowDialog();
-            User user = login.user;
-            MessageBox.Show(user.Login + " = " + user.Password);
+          
+          
             InitializeComponent();
-            site = new InstanceContext(this);
-            proxy = new ServerServiceClient(site);
-            proxy.Auth(user.Login, user.Password);
+            
+          
         }
 
         public void Message([MessageParameter(Name = "message")] dynamic message1, string descr)

@@ -32,3 +32,5 @@ E:\CommandProject\ProjectTest\CommandProject\obj\Debug\CommandProject.csproj.Gen
 E:\CommandProject\ProjectTest\CommandProject\obj\Debug\CommandProject.csproj.CoreCompileInputs.cache
 E:\CommandProject\ProjectTest\CommandProject\obj\Debug\CommandProject.exe
 E:\CommandProject\ProjectTest\CommandProject\obj\Debug\CommandProject.pdb
+E:\CommandProject\ProjectTest\CommandProject\obj\Debug\Registration\RegWin.g.cs
+E:\CommandProject\ProjectTest\CommandProject\obj\Debug\Registration\RegWin.baml

@@ -17,7 +17,7 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="RegButt" Grid.Row="4" Grid.Column="0" Margin="5" Width="150" Height="30" HorizontalAlignment="Center" Grid.ColumnSpan="2" VerticalAlignment="Bottom">Зарегистрироватся</Button>
+        <Button x:Name="RegButt" Grid.Row="4" Grid.Column="0" Margin="5" Width="150" Height="30" HorizontalAlignment="Center" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Click="RegButt_Click">Зарегистрироватся</Button>
         <Grid Grid.RowSpan="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Grid.RowDefinitions>
                 <RowDefinition/>
@@ -33,7 +33,7 @@
             <Label Grid.Row="2" HorizontalAlignment="Right" Margin="5" VerticalAlignment="Center">Повторите пароль:</Label>
             <TextBox x:Name="Login" Grid.Row="0" Grid.Column="1" Margin="5" Width="150" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBox>
             <PasswordBox x:Name="FirstPass" Grid.Row="1" Grid.Column="1" Margin="5" Width="150" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center"></PasswordBox>
-            <TextBox x:Name="LastPass" Grid.Row="2" Grid.Column="1" Margin="5" Width="150" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBox>
+            <PasswordBox x:Name="LastPass" Grid.Row="2" Grid.Column="1" Margin="5" Width="150" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center"></PasswordBox>
         </Grid>
     </Grid>
 </Window>

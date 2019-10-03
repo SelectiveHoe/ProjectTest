@@ -33,7 +33,7 @@ namespace CommandProject.Registration
             throw new NotImplementedException();
         }
 
-        private async void Button_Click(object sender, RoutedEventArgs e)
+        private  void Button_Click(object sender, RoutedEventArgs e)
         {
             if (Login.Text == "" || Password.Password == "")
             {
@@ -44,7 +44,7 @@ namespace CommandProject.Registration
                 user = new User();
                 user.Login = Login.Text;
                 user.Password = Password.Password;
-                user = await proxy.AuthAsync(user.Login, user.Password);
+                user = proxy.GetUser(user.Login);
                 if (user == null)
                 {
                     MessageBox.Show("Не правильный логин или пароль", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -54,11 +54,6 @@ namespace CommandProject.Registration
                     this.Close();
                 }
             }
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            this.Close();
         }
     }
 }
