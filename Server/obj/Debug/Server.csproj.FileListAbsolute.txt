@@ -11,3 +11,16 @@ C:\Users\Alex\Desktop\ProjectTest\Server\obj\Debug\Server.csproj.CoreCompileInpu
 C:\Users\Alex\Desktop\ProjectTest\Server\obj\Debug\Server.csproj.CopyComplete
 C:\Users\Alex\Desktop\ProjectTest\Server\obj\Debug\Server.exe
 C:\Users\Alex\Desktop\ProjectTest\Server\obj\Debug\Server.pdb
+D:\ProjectTest\Server\bin\Debug\Server.exe.config
+D:\ProjectTest\Server\bin\Debug\Server.exe
+D:\ProjectTest\Server\bin\Debug\Server.pdb
+D:\ProjectTest\Server\bin\Debug\DatabaseLib.dll
+D:\ProjectTest\Server\bin\Debug\EntityFramework.dll
+D:\ProjectTest\Server\bin\Debug\EntityFramework.SqlServer.dll
+D:\ProjectTest\Server\bin\Debug\EntityFramework.xml
+D:\ProjectTest\Server\bin\Debug\EntityFramework.SqlServer.xml
+D:\ProjectTest\Server\obj\Debug\Server.csprojAssemblyReference.cache
+D:\ProjectTest\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+D:\ProjectTest\Server\obj\Debug\Server.csproj.CopyComplete
+D:\ProjectTest\Server\obj\Debug\Server.exe
+D:\ProjectTest\Server\obj\Debug\Server.pdb
