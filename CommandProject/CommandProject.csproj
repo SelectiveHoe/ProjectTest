@@ -107,10 +107,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Connected Services\MyServiceReference\CommandProject.MyServiceReference.BugHistory.datasource">
+    <None Include="Connected Services\MyServiceReference\CommandProject.MyServiceReference.BugHistoriesDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MyServiceReference\CommandProject.MyServiceReference.User.datasource">
+    <None Include="Connected Services\MyServiceReference\CommandProject.MyServiceReference.UserDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MyServiceReference\item.xsd">

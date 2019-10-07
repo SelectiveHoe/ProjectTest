@@ -11,18 +11,47 @@ C:\Users\Alex\Desktop\ProjectTest\Server\obj\Debug\Server.csproj.CoreCompileInpu
 C:\Users\Alex\Desktop\ProjectTest\Server\obj\Debug\Server.csproj.CopyComplete
 C:\Users\Alex\Desktop\ProjectTest\Server\obj\Debug\Server.exe
 C:\Users\Alex\Desktop\ProjectTest\Server\obj\Debug\Server.pdb
-E:\CommandProject\ProjectTest\Server\bin\Debug\Server.exe.config
-E:\CommandProject\ProjectTest\Server\bin\Debug\Server.exe
-E:\CommandProject\ProjectTest\Server\bin\Debug\Server.pdb
-E:\CommandProject\ProjectTest\Server\bin\Debug\DatabaseLib.dll
-E:\CommandProject\ProjectTest\Server\bin\Debug\EntityFramework.dll
-E:\CommandProject\ProjectTest\Server\bin\Debug\EntityFramework.SqlServer.dll
-E:\CommandProject\ProjectTest\Server\bin\Debug\EntityFramework.xml
-E:\CommandProject\ProjectTest\Server\bin\Debug\EntityFramework.SqlServer.xml
-E:\CommandProject\ProjectTest\Server\obj\Debug\Server.csprojAssemblyReference.cache
-E:\CommandProject\ProjectTest\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
-E:\CommandProject\ProjectTest\Server\obj\Debug\Server.csproj.CopyComplete
-E:\CommandProject\ProjectTest\Server\obj\Debug\Server.exe
-E:\CommandProject\ProjectTest\Server\obj\Debug\Server.pdb
-E:\CommandProject\ProjectTest\Server\bin\Debug\DatabaseLib.pdb
-E:\CommandProject\ProjectTest\Server\bin\Debug\DatabaseLib.dll.config
+C:\Users\08359\Desktop\GitProject\ProjectTest\Server\bin\Debug\Server.exe.config
+C:\Users\08359\Desktop\GitProject\ProjectTest\Server\bin\Debug\Server.exe
+C:\Users\08359\Desktop\GitProject\ProjectTest\Server\bin\Debug\Server.pdb
+C:\Users\08359\Desktop\GitProject\ProjectTest\Server\bin\Debug\DatabaseLib.dll
+C:\Users\08359\Desktop\GitProject\ProjectTest\Server\bin\Debug\EntityFramework.dll
+C:\Users\08359\Desktop\GitProject\ProjectTest\Server\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\08359\Desktop\GitProject\ProjectTest\Server\bin\Debug\EntityFramework.xml
+C:\Users\08359\Desktop\GitProject\ProjectTest\Server\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\08359\Desktop\GitProject\ProjectTest\Server\obj\Debug\Server.csprojAssemblyReference.cache
+C:\Users\08359\Desktop\GitProject\ProjectTest\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\Users\08359\Desktop\GitProject\ProjectTest\Server\obj\Debug\Server.csproj.CopyComplete
+C:\Users\08359\Desktop\GitProject\ProjectTest\Server\obj\Debug\Server.exe
+C:\Users\08359\Desktop\GitProject\ProjectTest\Server\obj\Debug\Server.pdb
+C:\Users\08359\Desktop\GitProject\ProjectTest\Server\bin\Debug\DatabaseLib.pdb
+C:\Users\08359\Desktop\GitProject\ProjectTest\Server\bin\Debug\DatabaseLib.dll.config
+C:\Users\08359\Desktop\Новая папка\ProjectTest\Server\bin\Debug\Server.exe.config
+C:\Users\08359\Desktop\Новая папка\ProjectTest\Server\bin\Debug\Server.exe
+C:\Users\08359\Desktop\Новая папка\ProjectTest\Server\bin\Debug\Server.pdb
+C:\Users\08359\Desktop\Новая папка\ProjectTest\Server\bin\Debug\EntityFramework.dll
+C:\Users\08359\Desktop\Новая папка\ProjectTest\Server\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\08359\Desktop\Новая папка\ProjectTest\Server\bin\Debug\DatabaseLib.pdb
+C:\Users\08359\Desktop\Новая папка\ProjectTest\Server\bin\Debug\DatabaseLib.dll.config
+C:\Users\08359\Desktop\Новая папка\ProjectTest\Server\bin\Debug\EntityFramework.xml
+C:\Users\08359\Desktop\Новая папка\ProjectTest\Server\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\08359\Desktop\Новая папка\ProjectTest\Server\obj\Debug\Server.csprojAssemblyReference.cache
+C:\Users\08359\Desktop\Новая папка\ProjectTest\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\Users\08359\Desktop\Новая папка\ProjectTest\Server\obj\Debug\Server.csproj.CopyComplete
+C:\Users\08359\Desktop\Новая папка\ProjectTest\Server\obj\Debug\Server.exe
+C:\Users\08359\Desktop\Новая папка\ProjectTest\Server\obj\Debug\Server.pdb
+C:\Users\08359\Desktop\Project\ProjectTest\Server\bin\Debug\Server.exe.config
+C:\Users\08359\Desktop\Project\ProjectTest\Server\bin\Debug\Server.exe
+C:\Users\08359\Desktop\Project\ProjectTest\Server\bin\Debug\Server.pdb
+C:\Users\08359\Desktop\Project\ProjectTest\Server\bin\Debug\DatabaseLib.dll
+C:\Users\08359\Desktop\Project\ProjectTest\Server\bin\Debug\EntityFramework.dll
+C:\Users\08359\Desktop\Project\ProjectTest\Server\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\08359\Desktop\Project\ProjectTest\Server\bin\Debug\DatabaseLib.pdb
+C:\Users\08359\Desktop\Project\ProjectTest\Server\bin\Debug\DatabaseLib.dll.config
+C:\Users\08359\Desktop\Project\ProjectTest\Server\bin\Debug\EntityFramework.xml
+C:\Users\08359\Desktop\Project\ProjectTest\Server\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\08359\Desktop\Project\ProjectTest\Server\obj\Debug\Server.csprojAssemblyReference.cache
+C:\Users\08359\Desktop\Project\ProjectTest\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\Users\08359\Desktop\Project\ProjectTest\Server\obj\Debug\Server.csproj.CopyComplete
+C:\Users\08359\Desktop\Project\ProjectTest\Server\obj\Debug\Server.exe
+C:\Users\08359\Desktop\Project\ProjectTest\Server\obj\Debug\Server.pdb

@@ -1,4 +1,5 @@
 ﻿using ConsoleApp_DB;
+using Server.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,24 +15,29 @@ namespace Server
     {
         [OperationContract(IsOneWay = true)]
         void Registration(string login, string password, List<string> rolesName);
-        [OperationContract]
-        User Auth(string login, string password);
 
         [OperationContract]
-        User GetUser(string login);
+        UserDTO Auth(string login, string password);
 
         [OperationContract]
-        List<BugHistory> GetBugHistory();
+        UserDTO GetUser(string login);
+
         [OperationContract]
-        List<BugHistory> GetBugHistoryToNameUser(string nameUser = "");
+        List<BugHistoriesDTO> GetBugHistory();
+
         [OperationContract]
-        List<BugHistory> GetBugHistoryToDecriptionBug(string DescriptionBug);
+        List<BugHistoriesDTO> GetBugHistoryToNameUser(string nameUser = "");
+
+        [OperationContract]
+        List<BugHistoriesDTO> GetBugHistoryToDecriptionBug(string DescriptionBug);
+
         [OperationContract(IsOneWay = true)]
         void EditStatusBugs(string Login, string DescriptionBugHistory, string status);
-        [OperationContract(IsOneWay = true)]
-        void DropBug(string DescriptionBug, int UserId);
 
         [OperationContract(IsOneWay = true)]
-        void AddBug(User user, string Decription, List<List<byte>> ImgBytes);
+        void DropBug(string DescriptionBug, string LoginUser);
+
+        [OperationContract(IsOneWay = true)]
+        void AddBug(string Login, string Decription, List<List<byte>> ImgBytes);
     }
 }

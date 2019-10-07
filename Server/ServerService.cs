@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 using ConsoleApp_DB;
-using System.Data.Entity;
+using Server.Model;
 
 namespace Server
 {
@@ -14,7 +14,9 @@ namespace Server
     public class ServerService : IServerService
     {
         Dictionary<User, OperationContext> operationContexts = new Dictionary<User, OperationContext>();
-        public void AddBug(User user, string Decription, List<List<byte>> ImgBytes)
+
+
+        public void AddBug(string Login, string Decription, List<List<byte>> ImgBytes)
         {
             DatabaseContext db = new DatabaseContext();
             List<Picture> pic = new List<Picture>();
@@ -30,7 +32,7 @@ namespace Server
             {
                 foreach (var item in operationContexts.ToList())
                 {
-                    if (item.Key.Login != user.Login)
+                    if (item.Key.Login != Login)
                     {
                         if (item.Key.Roles.FirstOrDefault(x => x.Name == "Разработчик" ||
                         x.Name == "Старший разработчик" || x.Name == "Владелец проекта" ||
@@ -47,38 +49,40 @@ namespace Server
             }
         }
 
-        public User Auth(string login, string password)
+        public UserDTO Auth(string login, string password)
         {
-            //return new User() { Login = "123", Password = "123" };
-            using (DatabaseContext db = new DatabaseContext())
+            DatabaseContext db = new DatabaseContext();
+            var user = db.Users.FirstOrDefault(x => x.Login == login && x.Password == password);
+
+            if (user != null)
             {
-                var user = db.Users.Include(u => u.Roles).FirstOrDefault(x => x.Login == login && x.Password == password);
-                if (user != null)
+                try
                 {
-                    try
-                    {
-                        var temp = operationContexts[user];
-                        temp = OperationContext.Current;
-                    }
-                    catch (Exception ex)
-                    {
-                        operationContexts.Add(user, OperationContext.Current);
-                    }
-
-
-
-                    return new User();
+                    var temp = operationContexts[user];
+                    temp = OperationContext.Current;
                 }
-                return null;
-            }
+                catch (Exception)
+                {
+                    operationContexts.Add(user, OperationContext.Current);
+                }
+
+                List<string> roles = new List<string>();
+                foreach (var role in user.Roles)
+                    roles.Add(role.Name);
+
+                return new UserDTO() { Login = user.Login, Roles = roles };
+            }            
+
+            return null;
         }
 
-        public void DropBug(string DescriptionBug, int UserId)
+        public void DropBug(string DescriptionBug, string LoginUser)
         {
             DatabaseContext db = new DatabaseContext();
             var bug = db.Bugs.FirstOrDefault(x => x.Description == DescriptionBug);
             var status = db.Statuses.FirstOrDefault(x => x.Id == 5);
-            var user = db.Users.FirstOrDefault(x => x.Id == UserId);
+            var user = db.Users.FirstOrDefault(x => x.Login == LoginUser);
+
             db.BugHistories.Add(new BugHistory()
             {
                 BugId = bug.Id,
@@ -89,7 +93,9 @@ namespace Server
                 User = user,
                 UserId = user.Id
             });
+
             db.SaveChanges();
+
             try
             {
                 foreach (var item in operationContexts.ToList())
@@ -120,6 +126,7 @@ namespace Server
             bug.Status = stat;
             db.BugHistories.Add(bug);
             db.SaveChanges();
+
             try
             {
                 foreach (var item in operationContexts.ToList())
@@ -141,36 +148,117 @@ namespace Server
             }
         }
 
-        public List<BugHistory> GetBugHistory()
+        public List<BugHistoriesDTO> GetBugHistory()
         {
             DatabaseContext db = new DatabaseContext();
-            return db.BugHistories.ToList();
+            var tempData = db.BugHistories.ToList();
+            List<BugHistoriesDTO> bugHistories = new List<BugHistoriesDTO>();
+
+            foreach(var Item in tempData)
+            {
+
+                List<string> roles = new List<string>();
+                foreach (var role in Item.User.Roles)
+                    roles.Add(role.Name);
+
+                var tempUser = new UserDTO
+                {
+                    Login = Item.User.Login,
+                    Roles = roles
+                };
+
+                bugHistories.Add(new BugHistoriesDTO()
+                {
+                    Description = Item.Bug.Description,
+                    StatusName = Item.Status.Name,
+                    User = tempUser,
+                    Time = Item.Date
+                    
+                });
+            }
+
+            return bugHistories;
         }
 
-        public List<BugHistory> GetBugHistoryToDecriptionBug(string DecriptionBug)
+        public List<BugHistoriesDTO> GetBugHistoryToDecriptionBug(string DecriptionBug)
         {
             DatabaseContext db = new DatabaseContext();
-            return db.BugHistories.Where(x => x.Bug.Description == DecriptionBug).ToList();
+            var tempData = db.BugHistories.Where(x => x.Bug.Description == DecriptionBug).ToList();
+            List<BugHistoriesDTO> bugHistories = new List<BugHistoriesDTO>();
+
+            foreach (var Item in tempData)
+            {
+                List<string> roles = new List<string>();
+                foreach (var role in Item.User.Roles)
+                    roles.Add(role.Name);
+
+                var tempUser = new UserDTO
+                {
+                    Login = Item.User.Login,
+                    Roles = roles
+                };
+
+                bugHistories.Add(new BugHistoriesDTO()
+                {
+                    Description = Item.Bug.Description,
+                    StatusName = Item.Status.Name,
+                    User = tempUser,
+                    Time = Item.Date
+
+                });
+            }
+
+            return bugHistories;
         }
 
-        public List<BugHistory> GetBugHistoryToNameUser(string loginUser = "")
+        public List<BugHistoriesDTO> GetBugHistoryToNameUser(string loginUser = "")
         {
             DatabaseContext db = new DatabaseContext();
-            return db.BugHistories.Where(x => x.User.Login == loginUser).ToList();
+            var tempData = db.BugHistories.Where(x => x.User.Login == loginUser).ToList();
+            List<BugHistoriesDTO> bugHistories = new List<BugHistoriesDTO>();
+
+            foreach (var Item in tempData)
+            {
+                List<string> roles = new List<string>();
+                foreach (var role in Item.User.Roles)
+                    roles.Add(role.Name);
+
+                var tempUser = new UserDTO
+                {
+                    Login = Item.User.Login,
+                    Roles = roles
+                };
+
+                bugHistories.Add(new BugHistoriesDTO()
+                {
+                    Description = Item.Bug.Description,
+                    StatusName = Item.Status.Name,
+                    User = tempUser,
+                    Time = Item.Date
+
+                });
+            }
+
+            return bugHistories;
         }
 
-        public User GetUser(string login)
+        public UserDTO GetUser(string login)
         {
             DatabaseContext db = new DatabaseContext();
             var user = db.Users.FirstOrDefault(x => x.Login == login);
 
-            List<Role> tempRoles = new List<Role>();
-            foreach (var Item in user.Roles)
-                tempRoles.Add(new Role() { Id = Item.Id, Name = Item.Name });
-
-
             if (user != null)
-                return new User() { Id = user.Id, Login = user.Login, Password = user.Password, Roles = tempRoles };
+            {
+                List<string> roles = new List<string>();
+                foreach (var role in user.Roles)
+                    roles.Add(role.Name);
+
+                return new UserDTO
+                {
+                    Login = user.Login,
+                    Roles = roles
+                };
+            }
 
             return null;
         }

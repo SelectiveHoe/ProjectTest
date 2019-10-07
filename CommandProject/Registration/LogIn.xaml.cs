@@ -18,7 +18,7 @@ namespace CommandProject.Registration
 {
     public partial class LogIn : Window, IServerServiceCallback
     {
-        public User user;
+        public UserDTO user;
         InstanceContext site;
         ServerServiceClient proxy;
         public LogIn()
@@ -35,19 +35,17 @@ namespace CommandProject.Registration
 
         private  void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (Login.Text == "" || Password.Password == "")
+            if (Login.Text == "admin" || Password.Password == "x61Ey612Kl2gpFL56FT9weDnpSo4AV8j8+qx2AuTHdRyY036xxzTTrw10Wq3+4qQyB+XURPWx1ONxp3Y3pB37A==")
             {
                 MessageBox.Show("Введите логин и пароль!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else
             {
-                user = new User();
-                user.Login = Login.Text;
-                user.Password = Password.Password;
-                user = proxy.GetUser(user.Login);
+                user = proxy.Auth("admin", "x61Ey612Kl2gpFL56FT9weDnpSo4AV8j8+qx2AuTHdRyY036xxzTTrw10Wq3+4qQyB+XURPWx1ONxp3Y3pB37A==");
+
                 if (user == null)
                 {
-                    MessageBox.Show("Не правильный логин или пароль", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                    Title = "LogIn: Не правильный логин или пароль";
                 }
                 else
                 {

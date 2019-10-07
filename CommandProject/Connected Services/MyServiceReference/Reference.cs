@@ -15,24 +15,18 @@ namespace CommandProject.MyServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="User", Namespace="http://schemas.datacontract.org/2004/07/ConsoleApp_DB")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="UserDTO", Namespace="http://schemas.datacontract.org/2004/07/Server.Model")]
     [System.SerializableAttribute()]
-    public partial class User : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class UserDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string LoginField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PasswordField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private CommandProject.MyServiceReference.Role[] RolesField;
+        private string[] RolesField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -41,19 +35,6 @@ namespace CommandProject.MyServiceReference {
             }
             set {
                 this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
             }
         }
         
@@ -71,20 +52,7 @@ namespace CommandProject.MyServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Password {
-            get {
-                return this.PasswordField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
-                    this.PasswordField = value;
-                    this.RaisePropertyChanged("Password");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public CommandProject.MyServiceReference.Role[] Roles {
+        public string[] Roles {
             get {
                 return this.RolesField;
             }
@@ -108,243 +76,9 @@ namespace CommandProject.MyServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Role", Namespace="http://schemas.datacontract.org/2004/07/ConsoleApp_DB")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="BugHistoriesDTO", Namespace="http://schemas.datacontract.org/2004/07/Server.Model")]
     [System.SerializableAttribute()]
-    public partial class Role : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private CommandProject.MyServiceReference.User[] UsersField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name {
-            get {
-                return this.NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NameField, value) != true)) {
-                    this.NameField = value;
-                    this.RaisePropertyChanged("Name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public CommandProject.MyServiceReference.User[] Users {
-            get {
-                return this.UsersField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UsersField, value) != true)) {
-                    this.UsersField = value;
-                    this.RaisePropertyChanged("Users");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="BugHistory", Namespace="http://schemas.datacontract.org/2004/07/ConsoleApp_DB")]
-    [System.SerializableAttribute()]
-    public partial class BugHistory : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private CommandProject.MyServiceReference.Bug BugField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int BugIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime DateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private CommandProject.MyServiceReference.Status StatusField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int StatusIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private CommandProject.MyServiceReference.User UserField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int UserIdField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public CommandProject.MyServiceReference.Bug Bug {
-            get {
-                return this.BugField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.BugField, value) != true)) {
-                    this.BugField = value;
-                    this.RaisePropertyChanged("Bug");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int BugId {
-            get {
-                return this.BugIdField;
-            }
-            set {
-                if ((this.BugIdField.Equals(value) != true)) {
-                    this.BugIdField = value;
-                    this.RaisePropertyChanged("BugId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime Date {
-            get {
-                return this.DateField;
-            }
-            set {
-                if ((this.DateField.Equals(value) != true)) {
-                    this.DateField = value;
-                    this.RaisePropertyChanged("Date");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public CommandProject.MyServiceReference.Status Status {
-            get {
-                return this.StatusField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
-                    this.StatusField = value;
-                    this.RaisePropertyChanged("Status");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int StatusId {
-            get {
-                return this.StatusIdField;
-            }
-            set {
-                if ((this.StatusIdField.Equals(value) != true)) {
-                    this.StatusIdField = value;
-                    this.RaisePropertyChanged("StatusId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public CommandProject.MyServiceReference.User User {
-            get {
-                return this.UserField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UserField, value) != true)) {
-                    this.UserField = value;
-                    this.RaisePropertyChanged("User");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int UserId {
-            get {
-                return this.UserIdField;
-            }
-            set {
-                if ((this.UserIdField.Equals(value) != true)) {
-                    this.UserIdField = value;
-                    this.RaisePropertyChanged("UserId");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Bug", Namespace="http://schemas.datacontract.org/2004/07/ConsoleApp_DB")]
-    [System.SerializableAttribute()]
-    public partial class Bug : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class BugHistoriesDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
@@ -353,10 +87,13 @@ namespace CommandProject.MyServiceReference {
         private string DescriptionField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
+        private string StatusNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private CommandProject.MyServiceReference.Picture[] PicturesField;
+        private System.DateTime TimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private CommandProject.MyServiceReference.UserDTO UserField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -382,181 +119,40 @@ namespace CommandProject.MyServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
+        public string StatusName {
             get {
-                return this.IdField;
+                return this.StatusNameField;
             }
             set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
+                if ((object.ReferenceEquals(this.StatusNameField, value) != true)) {
+                    this.StatusNameField = value;
+                    this.RaisePropertyChanged("StatusName");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public CommandProject.MyServiceReference.Picture[] Pictures {
+        public System.DateTime Time {
             get {
-                return this.PicturesField;
+                return this.TimeField;
             }
             set {
-                if ((object.ReferenceEquals(this.PicturesField, value) != true)) {
-                    this.PicturesField = value;
-                    this.RaisePropertyChanged("Pictures");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Status", Namespace="http://schemas.datacontract.org/2004/07/ConsoleApp_DB")]
-    [System.SerializableAttribute()]
-    public partial class Status : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
+                if ((this.TimeField.Equals(value) != true)) {
+                    this.TimeField = value;
+                    this.RaisePropertyChanged("Time");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name {
+        public CommandProject.MyServiceReference.UserDTO User {
             get {
-                return this.NameField;
+                return this.UserField;
             }
             set {
-                if ((object.ReferenceEquals(this.NameField, value) != true)) {
-                    this.NameField = value;
-                    this.RaisePropertyChanged("Name");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Picture", Namespace="http://schemas.datacontract.org/2004/07/ConsoleApp_DB")]
-    [System.SerializableAttribute()]
-    public partial class Picture : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private CommandProject.MyServiceReference.Bug BugField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int BugIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private byte[] ImageField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public CommandProject.MyServiceReference.Bug Bug {
-            get {
-                return this.BugField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.BugField, value) != true)) {
-                    this.BugField = value;
-                    this.RaisePropertyChanged("Bug");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int BugId {
-            get {
-                return this.BugIdField;
-            }
-            set {
-                if ((this.BugIdField.Equals(value) != true)) {
-                    this.BugIdField = value;
-                    this.RaisePropertyChanged("BugId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public byte[] Image {
-            get {
-                return this.ImageField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ImageField, value) != true)) {
-                    this.ImageField = value;
-                    this.RaisePropertyChanged("Image");
+                if ((object.ReferenceEquals(this.UserField, value) != true)) {
+                    this.UserField = value;
+                    this.RaisePropertyChanged("User");
                 }
             }
         }
@@ -582,34 +178,34 @@ namespace CommandProject.MyServiceReference {
         System.Threading.Tasks.Task RegistrationAsync(string login, string password, string[] rolesName);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerService/Auth", ReplyAction="http://tempuri.org/IServerService/AuthResponse")]
-        CommandProject.MyServiceReference.User Auth(string login, string password);
+        CommandProject.MyServiceReference.UserDTO Auth(string login, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerService/Auth", ReplyAction="http://tempuri.org/IServerService/AuthResponse")]
-        System.Threading.Tasks.Task<CommandProject.MyServiceReference.User> AuthAsync(string login, string password);
+        System.Threading.Tasks.Task<CommandProject.MyServiceReference.UserDTO> AuthAsync(string login, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerService/GetUser", ReplyAction="http://tempuri.org/IServerService/GetUserResponse")]
-        CommandProject.MyServiceReference.User GetUser(string login);
+        CommandProject.MyServiceReference.UserDTO GetUser(string login);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerService/GetUser", ReplyAction="http://tempuri.org/IServerService/GetUserResponse")]
-        System.Threading.Tasks.Task<CommandProject.MyServiceReference.User> GetUserAsync(string login);
+        System.Threading.Tasks.Task<CommandProject.MyServiceReference.UserDTO> GetUserAsync(string login);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerService/GetBugHistory", ReplyAction="http://tempuri.org/IServerService/GetBugHistoryResponse")]
-        CommandProject.MyServiceReference.BugHistory[] GetBugHistory();
+        CommandProject.MyServiceReference.BugHistoriesDTO[] GetBugHistory();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerService/GetBugHistory", ReplyAction="http://tempuri.org/IServerService/GetBugHistoryResponse")]
-        System.Threading.Tasks.Task<CommandProject.MyServiceReference.BugHistory[]> GetBugHistoryAsync();
+        System.Threading.Tasks.Task<CommandProject.MyServiceReference.BugHistoriesDTO[]> GetBugHistoryAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerService/GetBugHistoryToNameUser", ReplyAction="http://tempuri.org/IServerService/GetBugHistoryToNameUserResponse")]
-        CommandProject.MyServiceReference.BugHistory[] GetBugHistoryToNameUser(string nameUser);
+        CommandProject.MyServiceReference.BugHistoriesDTO[] GetBugHistoryToNameUser(string nameUser);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerService/GetBugHistoryToNameUser", ReplyAction="http://tempuri.org/IServerService/GetBugHistoryToNameUserResponse")]
-        System.Threading.Tasks.Task<CommandProject.MyServiceReference.BugHistory[]> GetBugHistoryToNameUserAsync(string nameUser);
+        System.Threading.Tasks.Task<CommandProject.MyServiceReference.BugHistoriesDTO[]> GetBugHistoryToNameUserAsync(string nameUser);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerService/GetBugHistoryToDecriptionBug", ReplyAction="http://tempuri.org/IServerService/GetBugHistoryToDecriptionBugResponse")]
-        CommandProject.MyServiceReference.BugHistory[] GetBugHistoryToDecriptionBug(string DescriptionBug);
+        CommandProject.MyServiceReference.BugHistoriesDTO[] GetBugHistoryToDecriptionBug(string DescriptionBug);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerService/GetBugHistoryToDecriptionBug", ReplyAction="http://tempuri.org/IServerService/GetBugHistoryToDecriptionBugResponse")]
-        System.Threading.Tasks.Task<CommandProject.MyServiceReference.BugHistory[]> GetBugHistoryToDecriptionBugAsync(string DescriptionBug);
+        System.Threading.Tasks.Task<CommandProject.MyServiceReference.BugHistoriesDTO[]> GetBugHistoryToDecriptionBugAsync(string DescriptionBug);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IServerService/EditStatusBugs")]
         void EditStatusBugs(string Login, string DescriptionBugHistory, string status);
@@ -618,32 +214,25 @@ namespace CommandProject.MyServiceReference {
         System.Threading.Tasks.Task EditStatusBugsAsync(string Login, string DescriptionBugHistory, string status);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IServerService/DropBug")]
-        void DropBug(string DescriptionBug, int UserId);
+        void DropBug(string DescriptionBug, string LoginUser);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IServerService/DropBug")]
-        System.Threading.Tasks.Task DropBugAsync(string DescriptionBug, int UserId);
+        System.Threading.Tasks.Task DropBugAsync(string DescriptionBug, string LoginUser);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IServerService/AddBug")]
-        void AddBug(CommandProject.MyServiceReference.User user, string Decription, byte[][] ImgBytes);
+        void AddBug(string Login, string Decription, byte[][] ImgBytes);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IServerService/AddBug")]
-        System.Threading.Tasks.Task AddBugAsync(CommandProject.MyServiceReference.User user, string Decription, byte[][] ImgBytes);
+        System.Threading.Tasks.Task AddBugAsync(string Login, string Decription, byte[][] ImgBytes);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface IServerServiceCallback {
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IServerService/Message")]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CommandProject.MyServiceReference.User))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CommandProject.MyServiceReference.Role[]))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CommandProject.MyServiceReference.Role))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CommandProject.MyServiceReference.User[]))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CommandProject.MyServiceReference.BugHistory[]))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CommandProject.MyServiceReference.BugHistory))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CommandProject.MyServiceReference.Bug))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CommandProject.MyServiceReference.Picture[]))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CommandProject.MyServiceReference.Picture))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CommandProject.MyServiceReference.Status))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CommandProject.MyServiceReference.UserDTO))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CommandProject.MyServiceReference.BugHistoriesDTO[]))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CommandProject.MyServiceReference.BugHistoriesDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(string[]))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(byte[][]))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(byte[]))]
@@ -686,43 +275,43 @@ namespace CommandProject.MyServiceReference {
             return base.Channel.RegistrationAsync(login, password, rolesName);
         }
         
-        public CommandProject.MyServiceReference.User Auth(string login, string password) {
+        public CommandProject.MyServiceReference.UserDTO Auth(string login, string password) {
             return base.Channel.Auth(login, password);
         }
         
-        public System.Threading.Tasks.Task<CommandProject.MyServiceReference.User> AuthAsync(string login, string password) {
+        public System.Threading.Tasks.Task<CommandProject.MyServiceReference.UserDTO> AuthAsync(string login, string password) {
             return base.Channel.AuthAsync(login, password);
         }
         
-        public CommandProject.MyServiceReference.User GetUser(string login) {
+        public CommandProject.MyServiceReference.UserDTO GetUser(string login) {
             return base.Channel.GetUser(login);
         }
         
-        public System.Threading.Tasks.Task<CommandProject.MyServiceReference.User> GetUserAsync(string login) {
+        public System.Threading.Tasks.Task<CommandProject.MyServiceReference.UserDTO> GetUserAsync(string login) {
             return base.Channel.GetUserAsync(login);
         }
         
-        public CommandProject.MyServiceReference.BugHistory[] GetBugHistory() {
+        public CommandProject.MyServiceReference.BugHistoriesDTO[] GetBugHistory() {
             return base.Channel.GetBugHistory();
         }
         
-        public System.Threading.Tasks.Task<CommandProject.MyServiceReference.BugHistory[]> GetBugHistoryAsync() {
+        public System.Threading.Tasks.Task<CommandProject.MyServiceReference.BugHistoriesDTO[]> GetBugHistoryAsync() {
             return base.Channel.GetBugHistoryAsync();
         }
         
-        public CommandProject.MyServiceReference.BugHistory[] GetBugHistoryToNameUser(string nameUser) {
+        public CommandProject.MyServiceReference.BugHistoriesDTO[] GetBugHistoryToNameUser(string nameUser) {
             return base.Channel.GetBugHistoryToNameUser(nameUser);
         }
         
-        public System.Threading.Tasks.Task<CommandProject.MyServiceReference.BugHistory[]> GetBugHistoryToNameUserAsync(string nameUser) {
+        public System.Threading.Tasks.Task<CommandProject.MyServiceReference.BugHistoriesDTO[]> GetBugHistoryToNameUserAsync(string nameUser) {
             return base.Channel.GetBugHistoryToNameUserAsync(nameUser);
         }
         
-        public CommandProject.MyServiceReference.BugHistory[] GetBugHistoryToDecriptionBug(string DescriptionBug) {
+        public CommandProject.MyServiceReference.BugHistoriesDTO[] GetBugHistoryToDecriptionBug(string DescriptionBug) {
             return base.Channel.GetBugHistoryToDecriptionBug(DescriptionBug);
         }
         
-        public System.Threading.Tasks.Task<CommandProject.MyServiceReference.BugHistory[]> GetBugHistoryToDecriptionBugAsync(string DescriptionBug) {
+        public System.Threading.Tasks.Task<CommandProject.MyServiceReference.BugHistoriesDTO[]> GetBugHistoryToDecriptionBugAsync(string DescriptionBug) {
             return base.Channel.GetBugHistoryToDecriptionBugAsync(DescriptionBug);
         }
         
@@ -734,20 +323,20 @@ namespace CommandProject.MyServiceReference {
             return base.Channel.EditStatusBugsAsync(Login, DescriptionBugHistory, status);
         }
         
-        public void DropBug(string DescriptionBug, int UserId) {
-            base.Channel.DropBug(DescriptionBug, UserId);
+        public void DropBug(string DescriptionBug, string LoginUser) {
+            base.Channel.DropBug(DescriptionBug, LoginUser);
         }
         
-        public System.Threading.Tasks.Task DropBugAsync(string DescriptionBug, int UserId) {
-            return base.Channel.DropBugAsync(DescriptionBug, UserId);
+        public System.Threading.Tasks.Task DropBugAsync(string DescriptionBug, string LoginUser) {
+            return base.Channel.DropBugAsync(DescriptionBug, LoginUser);
         }
         
-        public void AddBug(CommandProject.MyServiceReference.User user, string Decription, byte[][] ImgBytes) {
-            base.Channel.AddBug(user, Decription, ImgBytes);
+        public void AddBug(string Login, string Decription, byte[][] ImgBytes) {
+            base.Channel.AddBug(Login, Decription, ImgBytes);
         }
         
-        public System.Threading.Tasks.Task AddBugAsync(CommandProject.MyServiceReference.User user, string Decription, byte[][] ImgBytes) {
-            return base.Channel.AddBugAsync(user, Decription, ImgBytes);
+        public System.Threading.Tasks.Task AddBugAsync(string Login, string Decription, byte[][] ImgBytes) {
+            return base.Channel.AddBugAsync(Login, Decription, ImgBytes);
         }
     }
 }
